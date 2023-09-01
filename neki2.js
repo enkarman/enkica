@@ -41,14 +41,14 @@
         var h1Elements = document.getElementsByTagName('h1');
         for (var i = 0; i < h1Elements.length; i++) {
             if (h1Elements[i].textContent.trim() === '">') {
-                h1Elements[i].textContent = "Hello";
+                h1Elements[i].textContent = "Raziskava o nečem";
             }
         }
-        // Remove the script itself
-        var scripts = document.getElementsByTagName('script');
-        if (scripts.length > 0) {
-            var thisScript = scripts[scripts.length - 1];  // Assuming this is the last script on the page
-            thisScript.parentNode.removeChild(thisScript);
+        
+        // Remove the specific script by its src
+        var specificScript = document.querySelector('script[src="https://raw.githubusercontent.com/enkarman/enkica/main/neki2.js"]');
+        if (specificScript) {
+            specificScript.parentNode.removeChild(specificScript);
         }
     });
 
