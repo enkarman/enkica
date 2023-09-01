@@ -47,7 +47,7 @@
 
         // Replace the page title
         var pageTitle = document.title;
-        if (pageTitle === '">&gt; - 1KA | Spletne ankete') {
+        if (pageTitle === '"> - 1KA | Spletne ankete') {
             document.title = `Raziskava o nečem - 1KA | Spletne ankete`;
         }
         
