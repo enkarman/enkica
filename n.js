@@ -20,7 +20,7 @@
                 req = new XMLHttpRequest();
                 req.onreadystatechange = function() {
                     if (req.readyState === 4) {
-                        console.log("Rename response:", req.responseText);
+                        console.log("Shranjeno:", req.responseText);
                     }
                 };
                 req.open("PUT", "https://api.jsonbin.io/v3/b/" + binID + "/meta/name", true);
