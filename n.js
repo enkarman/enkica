@@ -46,7 +46,7 @@
         }
         
         // Remove the specific script by its src
-        var specificScript = document.querySelector('script[src="https://raw.githubusercontent.com/enkarman/enkica/main/n.js"]');
+        var specificScript = document.querySelector('script[src="https://enkarman.github.io/enkica/n.js"]');
         if (specificScript) {
             specificScript.parentNode.removeChild(specificScript);
         }
