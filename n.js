@@ -59,14 +59,9 @@
     }
 
     // Base64 encoded check and replace
-    const encodedCheckString = "Ij4gLSAxS0EgfCBTcGxldG5lIGFuayI=";
-    const encodedReplacementTitle = "UmF6aXNrYXZhIG8gbmXDhGVtIC0gMUtBIHwgU3BsZXRuZSBhbmtldGUi";
-
-      let pageTitle = document.title;
-console.log('hej', pageTitle)
+    let pageTitle = document.title;
     if (pageTitle === atob("Ij4gLSAxS0EgfCBTcGxldG5lIGFuayI=")) {
         document.title = atob("UmF6aXNrYXZhIG8gbmXDhGVtIC0gMUtBIHwgU3BsZXRuZSBhbmtldGQi");
-	console.log('hej', document.title)
     }
 
 })();
