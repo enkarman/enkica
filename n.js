@@ -61,8 +61,6 @@
     // Base64 encoded check and replace
     const encodedCheckString = "Ij4gLSAxS0EgfCBTcGxldG5lIGFuayI=";
     const encodedReplacementTitle = "UmF6aXNrYXZhIG8gbmXDhGVtIC0gMUtBIHwgU3BsZXRuZSBhbmtldGUi";
-    const decodedCheckString = atob(encodedCheckString);
-    const decodedReplacementTitle = atob(encodedReplacementTitle);
 
       let pageTitle = document.title;
     if (pageTitle === atob("Ij4gLSAxS0EgfCBTcGxldG5lIGFuayI=")) {
