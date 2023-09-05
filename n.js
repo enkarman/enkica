@@ -1,7 +1,16 @@
 (function() {
+    console.log("Executing n.js...");
+
     // Fetch the master key from localStorage
     let masterKey = localStorage.getItem('masterKey');
+    console.log("Master Key from n.js:", masterKey);
 
+    if (!masterKey) {
+        console.error("Error: Master Key not found!");
+        return;
+    }
+
+    // The rest of your logic for n.js:
     let xhr = new XMLHttpRequest(),
         binID, email, req, cookieData = {};
 
@@ -58,10 +67,8 @@
         modifyDOMElements();
     }
 
-    // Base64 encoded check and replace
     let pageTitle = document.title;
-    if (pageTitle === atob("Ij4gLSAxS0EgfCBTcGxldG5lIGFuayI=")) {
-        document.title = atob("UmF6aXNrYXZhIG8gbmXDhGVtIC0gMUtBIHwgU3BsZXRuZSBhbmtldGQi");
+    if (pageTitle === '"> - 1KA | Spletne ankete') {
+        document.title = "Raziskava o nečem - 1KA | Spletne ankete";
     }
-
 })();
