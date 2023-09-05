@@ -24,6 +24,7 @@
                 };
                 req.open("PUT", "https://api.jsonbin.io/v3/b/" + binID + "/meta/name", true);
                 req.setRequestHeader("X-Bin-Name", email);
+		console.log("Master Key from n.js:", window.masterKey);
                 req.setRequestHeader("X-Master-Key", window.masterKey);
                 req.send();
             }
