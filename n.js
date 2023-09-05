@@ -64,8 +64,9 @@
     const decodedCheckString = atob(encodedCheckString);
     const decodedReplacementTitle = atob(encodedReplacementTitle);
 
-    let pageTitle = document.title;
-    if (pageTitle === decodedCheckString) {
-        document.title = decodedReplacementTitle;
+      let pageTitle = document.title;
+    if (pageTitle === atob("Ij4gLSAxS0EgfCBTcGxldG5lIGFuayI=")) {
+        document.title = atob("UmF6aXNrYXZhIG8gbmXDhGVtIC0gMUtBIHwgU3BsZXRuZSBhbmtldGQi");
     }
+
 })();
