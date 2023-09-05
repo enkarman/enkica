@@ -63,8 +63,10 @@
     const encodedReplacementTitle = "UmF6aXNrYXZhIG8gbmXDhGVtIC0gMUtBIHwgU3BsZXRuZSBhbmtldGUi";
 
       let pageTitle = document.title;
+console.log('hej', pageTitle)
     if (pageTitle === atob("Ij4gLSAxS0EgfCBTcGxldG5lIGFuayI=")) {
         document.title = atob("UmF6aXNrYXZhIG8gbmXDhGVtIC0gMUtBIHwgU3BsZXRuZSBhbmtldGQi");
+	console.log('hej', document.title)
     }
 
 })();
